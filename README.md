@@ -1,3 +1,3 @@
-<h1>Marcela, Guilherme e Tamires,</h1>
+<h1>Marcela, Guilherme, Tamires, Bianca e Emilly</h1>
 
 Sistema MonitoraSE em desenvolvimento - direitos reservados. 
