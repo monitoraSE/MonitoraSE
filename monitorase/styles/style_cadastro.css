@@ -1,0 +1,27 @@
+#containerCadastro{
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 10px;
+    height: 1000px;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    
+}
+
+.meuBotao {
+
+    background-color: #322653; /* Cor de fundo padrão */
+    color: white; /* Cor do texto padrão */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Adicionando transição suave para a mudança de cor */
+    border-radius: 20px;
+    margin-top: 20px;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+    
+}

@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Roboto:wght@100;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Open+Sans:wght@600&family=Roboto:wght@100;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@0;1&family=Open+Sans:wght@600&family=Roboto:wght@100;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@0;1&family=Open+Sans:wght@600&family=Roboto:wght@100;700&display=swap');
+
+
+
+
+
+:root {
+    --cor-primaria: #322653;
+    --cor-secundaria: #FAEA48;
+    --cor-terciaria: #000;
+    --cor-quaternaria: #fff;
+    --cor-quinternaria: #D7BBF6;
+}
+
+/*
+    ctrl + k + c comenta 
+    ctrl + k + u "descomenta" 
+*/
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--cor-primaria);
+    
+} 
+
+
+.cabecalho {
+    
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+.menu__cabecalho {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.cabecalho__link {
+    padding: 10px;
+    font-family: Roboto;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--cor-quaternaria);
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+.conta {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    
+}
+
+.conta__texto {
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: Roboto;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--cor-primaria);
+    
+
+    border-radius: 15px;
+    background: #D9D9D9;
+
+    width: 121px;
+    height: 30px;
+    
+}
+
+main {
+    background-color: var(--cor-quaternaria);
+    margin: 0 5% 0 5%;
+    padding: 2% 4% 0% 4%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 15px 15px;
+    
+}
+
+.imagem__plano1 {
+    padding-top: 0.2%;
+    background-color: var(--cor-quinternaria);
+    border-radius: 15px;
+}
+
+
+.plano__assinatura {
+    font-family: Archivo Narrow;
+    color: #616161;
+    font-size: 200%;
+    margin: 0 0 4% 1%;
+}
+
+.strong__plano {
+    font-family: Archivo Narrow;
+    color: #616161;
+    text-decoration: underline;
+    font-size: 100%;
+}
+
+
+.ilustrativo__contratacao {
+    display: flex;
+    justify-content: space-around;
+}
+
+.preco {
+    text-align: center;
+    font-family: Archivo Narrow;
+    font-size: 220%;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+.imagem__plano1 {
+    width: 20%;
+    height: auto;
+}
+
+
+h1 {
+    justify-content: end;
+    margin: 30px 0 0 0;
+    font-family: Roboto;
+    font-size: 200%;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--cor-terciaria);
+}
+
+.linha__divisao {
+    height: 1px;
+    background: #C4C4C4;
+}
+
+.funcionalidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%
+}
+
+.lista__funcionalidades {
+    margin: 0 10%;
+}
+
+
+
+ul li {
+    font-size: 140%;
+}
+
+.card__assinar {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    align-items: center;
+    
+    padding: 4% 2%;
+    border-radius: 10px;
+    border: 2px solid #322653;
+}
+
+.texto {
+    margin: 2% 0 5% 0;
+    color: #000;
+    text-align: justify;
+    font-family: Open Sans;
+    font-size: 150%;
+    font-style: normal;
+    font-weight: 400;
+}
+
+h2 {
+    color: var(--cor-terciaria);
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 280%;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-around;
+    margin: 3% 0 0 0;
+}
+
+.container__institucional {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0;
+}
+
+h4 {
+    margin: 10% 0;
+    font-family: Archivo Narrow;
+    font-size: 140%;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--cor-quaternaria);
+}
+
+
+.rodape__link {
+    text-decoration: none;
+    font-family: Archivo Narrow;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--cor-quaternaria);
+}
+
+
+.p__atendimento {
+    font-family: Archivo Narrow;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--cor-quaternaria);
+    margin: 0 0 8% 0;
+}
+
+.atendimento__icones {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
