@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.main-produto1 {
+    background-color: #fff;
+    margin: 0 5% 5% 5%;
+    padding: 2% 4% 0% 4%;
+
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 15px 15px;
+
+    
+}
+
+.imagem__plano1 {
+    padding-top: 0.2%;
+    background-color: #D7BBF6;
+    border-radius: 15px;
+
+    width: 20%;
+}
+
+
+.plano__assinatura {
+    font-family: Archivo Narrow;
+    color: #616161;
+    font-size: 200%;
+    margin: 0 0 4% 1%;
+}
+
+.strong__plano {
+    font-family: Archivo Narrow;
+    color: #616161;
+    text-decoration: underline;
+    font-size: 100%;
+}
+
+
+.ilustrativo__contratacao {
+    display: flex;
+    justify-content: space-around;
+
+    height: auto;
+
+}
+
+.preco {
+    text-align: center;
+    font-family: Archivo Narrow;
+    font-size: 220%;
+    font-style: normal;
+    font-weight: 700;
+    color: #322653;
+}
+
+
+
+.funcionalidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%
+}
+
+.card__assinar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 4% 2%;
+    border-radius: 10px;
+    border: 2px solid #322653;
+}
+
+.dropdown-funcionalidades {
+    border: solid;
+}
+
+
+.linha__divisao {
+    height: 1px;
+    background: #C4C4C4;
+}
+
+.descricao-texto {
+    margin-top: 5%;
+}
+
+.container-texto {
+    text-align: justify;
+    margin: 2% 0 5% 0;
+}
+
+.texto {
+    font-size: 150%;
+}
+
+@media (max-width: 860px){
+    .ilustrativo__contratacao {
+        flex-direction: column;
+        align-items: center;
+    }
+    .imagem__plano1 {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+
+
+
