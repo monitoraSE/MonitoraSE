@@ -2,9 +2,10 @@
 
 Sistema MonitoraSE em desenvolvimento - direitos reservados. 
 
-# Funcionalidades Implementadas
-## Login, Logout
-## Envio de Contato
-## Cadastro de Usuário
-## Cadastro de Turma
-## Busca de Aluno por CPF
+<ul> # Funcionalidades Implementadas
+<p>Login, Logout
+<li>Envio de Contato</li>
+<li>Cadastro de Usuário</li>
+<li>Cadastro de Turma</li>
+<li>Busca de Aluno por CPF</li>
+</ul>
