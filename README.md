@@ -2,7 +2,8 @@
 
 Sistema MonitoraSE em desenvolvimento - direitos reservados. 
 
-<ul> # Funcionalidades Implementadas
+# Funcionalidades Implementadas
+<ul> 
   <li>Login, Logout</li>
   <li>Envio de Contato</li>
   <li>Cadastro de Usuário</li>
