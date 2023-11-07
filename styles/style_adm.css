@@ -1,0 +1,45 @@
+#container1{
+    text-align:center;
+    height: 200px;
+}
+
+#containerTitulo{
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 10px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+#container11, #container12, #container13 {
+    display: inline-block;
+    width: 20%; /* Define a largura desejada para cada container */
+    margin: 0 5%; /* Cria um espaço entre os elementos */
+    text-align: center; /* Ajusta o alinhamento do conteúdo dentro dos containers */
+    background-color:yellow;
+    border-radius: 20px;
+    height: 90px;
+}
+
+#container2{
+    text-align:center;
+    height: 500px;
+}
+
+#container14, #container15, #container16 {
+    display: inline-block;
+    width: 20%; /* Define a largura desejada para cada container */
+    margin: 0 5%; /* Cria um espaço entre os elementos */
+    text-align: center; /* Ajusta o alinhamento do conteúdo dentro dos containers */
+    background-color:yellow;
+    border-radius: 20px;
+    height: 90px;
+}
+.container-text {
+    display: block; /* Torna o texto um elemento de bloco */
+  }
+
+
