@@ -10,7 +10,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="cadastro" href="./js/cadastro.js">
   <link rel="stylesheet" href="styles/style_cadastro.css">
 
 </head>
@@ -29,50 +30,61 @@
 
     <!--Conteiner principal-->
 
-    <div id="containerCadastro">    
+    <form id="containerCadastro" action="./php/cadastro-usuario.php" method="post">    
 
       <h2 class="text-center"><b>Cadastrar Usuário</b></h2><br>
+      <label for="cpfFormCada" class="form-label "><b>CPF:</b></label>
+      <input type="cpf" class="form-control" id="cpfFormCada" name="cpf" placeholder="apenas números" required>
 
       <label for="nomeFormCada" class="form-label "><b>Nome:</b></label>
       <input type="text" class="form-control" id="nomeFormCada" name="nome" required> 
 
-      <label for="cpfFormCada" class="form-label "><b>CPF:</b></label>
-      <input type="cpf" class="form-control" id="cpfFormCada" name="cpf" required>
-
-      <label for="nascFormCada" class="form-label "><b>Data de Nascimento:</b></label>
-      <input type="nasc" class="form-control" id="nascFormCada" name="nasc" required>
-
       <label for="emailFormCada" class="form-label "><b>E-mail:</b></label>     
       <input type="email" class="form-control" id="emailFormCada" placeholder="name@example.com" name="email" required>
+
+      <label for="nascFormCada" class="form-label "><b>Data de Nascimento:</b></label>
+      <input type="date" class="form-control" id="nascFormCada" name="nascimento" placeholder="xx/xx/xxxx apenas números" required>
+
+      <label for="telefoneFormCada" class="form-label "><b>Telefone:</b></label>
+      <input type="text" maxlength="11" class="form-control" id="telefoneFormCada" name="telefone" placeholder="xxxxxxx-xxxx apenas números" required>
       
       <label for="senhaFormCada" class="form-label "><b>Senha:</b></label>
-      <input type="senha" class="form-control" id="cpfFormCada" name="senha" required>
+      <input type="senha" maxlength="15" class="form-control" id="senhaFormCada" name="senha" required>
       <br><br>
       <label for="usuFormCada" class="form-label "><b>Tipo de Usuário:</b></label>
       <br><br>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <input class="form-check-input" type="radio" name="tipoUsuario"
+        <?php if(isset($usuario) && $usuario == "2") echo checked;?> id="inlineRadio1" value="2">
         <label class="form-check-label" for="inlineRadio1">Professor</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <input class="form-check-input" type="radio" name="tipoUsuario" 
+        <?php if(isset($usuario) && $usuario == "3") echo checked;?> id="inlineRadio2" value="3">
         <label class="form-check-label" for="inlineRadio2">Responsável</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-        <label class="form-check-label" for="inlineRadio2">Aluno</label>
+        <input class="form-check-input" type="radio" name="tipoUsuario" 
+        <?php if(isset($usuario) && $usuario == "3") echo checked;?> id="inlineRadio3" value="4">
+        <label class="form-check-label" for="inlineRadio3">Aluno</label>
       </div>
       <br><br><br>
 
       <div class="botaoCadastrar">
-        <button class="meuBotao">Cadastrar</button>
+        <button type="submit" class="meuBotao">Cadastrar</button>
       </div>
       
-    </div>
-  
+    </form>
 
-    <script>
+</body>
+
+    <!-- Rodapé-->
+<?php
+    include_once("rodape.php");
+?>
+
+<script>
       // Adiciona um evento de clique ao botão "Cadastrar"
       document.getElementById('cadastrarBotao').addEventListener('click', function(event) {
         // Validação dos campos obrigatórios
@@ -88,11 +100,4 @@
           event.preventDefault(); // Impede o envio do formulário
         }
       });
-    </script>
-
-</body>
-
-    <!-- Rodapé-->
-    <?php
-          include_once("rodape.php");
-    ?>
+</script>

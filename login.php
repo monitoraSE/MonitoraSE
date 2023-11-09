@@ -5,42 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MonitoraSE</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="./styles/style.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
 </head>
 <body class="body__login">
-    
     <?php
           include_once("navbar-home.php");
     ?>
 
-    
     <main class="main-login">
 
-      <div class="retangulo__branco">  
+        <div class="retangulo__branco">  
 
-          <h1 class="login-titulo">Login</h1>
+            <h1 class="login-titulo">Login</h1>
 
-          <form class="container-imput">
+            <form class="container-imput" method="POST" action="./php/loginUsuario.php">
 
-              <div>
-                  <label for="cpf-cnpj" class="email-senha">CPF </label>
-                  <input type="text" id="email" name="cpf-cnpj" class="input" placeholder="CPF">
-              </div>
+                <div>
+                    <label for="cpf" class="email-senha">CPF</label>
+                    <input type="text" id="email" name="cpf" class="input" placeholder="CPF apenas números">
+                </div>
 
-              <div>
-                  <label for="senha" class="email-senha">Senha</label>
-                  <input type="password" id="senha" name="senha" class="input" placeholder="****************">
-              </div>
+                <div>
+                    <label for="senha" class="email-senha">Senha</label>
+                    <input type="password" id="senha" name="senha" class="input" placeholder="****************">
+                </div>
+                    <input type="submit" value="Entrar" class="input-entrar">
+                </div>
 
-          </form>
+            </form>
 
-          <div class="container-entrar">
-              <input type="submit" value="Entrar" class="input-entrar">
-          </div>
+            <p class="text-center text-danger">
+                <?php 
+                //Recuperando o valor da variável global, os erro de login.
+                if(isset($_SESSION['loginErro'])){
+                    echo $_SESSION['loginErro'];
+                    unset($_SESSION['loginErro']);
+                }?>
+            <p class="text-center text-success">
+            <?php 
+			      //Recuperando o valor da variável global, deslogado com sucesso.
+            if(isset($_SESSION['logindeslogado'])){
+                echo $_SESSION['logindeslogado'];
+                unset($_SESSION['logindeslogado']);
+            }
+            ?>
 
-      </div>
-      
-</main>
+        </div>
+
+    </main>
 
     <?php
           include_once("rodape.php");

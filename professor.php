@@ -19,13 +19,26 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="professor.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="professor.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
                     </li>
                 </ul>
           </div>
+          <?php
+            session_start();
+                if(isset($_SESSION['usuarioNome'])){
+                    echo '<a href="php/logout.php" class="btn btn-bd-login fonteBotao"> 
+                    Logout
+                    </a>';
+                }
+                else{
+                    echo '<a href="login.php" class="btn btn-bd-login fonteBotao"> 
+                    Login
+                </a>';
+            }
+        ?>
         </div>
     </nav>
 

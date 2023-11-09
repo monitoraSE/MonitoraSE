@@ -5,7 +5,7 @@
           
           <a class="fonteFooter" href="#sobre">Sobre nós</a><br>
           Políticas de Pagamento<br>
-          <a class="fonteFooter" href = "contato.html">Contato</a>
+          <a class="fonteFooter" href = "contato.php">Contato</a>
         </div>
         <div class="col-md-3 col-lg-2">
           <h4 class="fonteFooterDestaque">Atendimento</h4>

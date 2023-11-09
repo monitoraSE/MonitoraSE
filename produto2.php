@@ -10,7 +10,8 @@
 </head>
 
 <body class="body-produto1">
-    <?php
+
+<?php
           include_once("navbar-home.php");
     ?>
 
@@ -100,7 +101,7 @@
         </div>
 
     </main>
-
+    
     <?php
           include_once("rodape.php");
     ?>

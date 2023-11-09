@@ -1,3 +1,40 @@
+<?php
+        //Incluindo a conexão com banco de dados   
+    include_once("php/conexaobd.php");    
+    //O campo usuário e senha preenchido entra no if para validar
+    if((isset($_POST['cpf'])) && (isset($_REQUEST['busca']))){
+        $usuario = mysqli_real_escape_string($conecta, $_POST['cpf']);
+        //$pesquisa = $_POST['cpf'];
+            
+        //Buscar na tabela usuario o usuário que corresponde com os dados digitado no formulário
+        $result_usuario = "SELECT * FROM Usuario WHERE CPF = '$usuario' LIMIT 1";
+        $resultado_usuario = mysqli_query($conecta, $result_usuario) or die("Erro ao retornar dados");
+        //$resultado = mysqli_fetch_assoc($resultado_usuario);
+
+        //$numRegistro = mysqli_num_rows($resultado_usuario);
+        
+        //Encontrado um usuario na tabela usuário com os mesmos dados digitado no formulário
+        while($registro = mysqli_fetch_assoc($resultado_usuario)){
+          $nome = $registro['Nome'];
+          $cpf = $registro['CPF'];
+          //var_dump($_POST);
+        }
+    }
+    if((isset($_POST['cpf'])) && (isset($_REQUEST['cadastro-turma']))){
+      $cpf   = $_POST["cpf"];
+      $ano       = $_POST["ano"];
+      $turma      = $_POST["turma"];
+      $inserir_turma = "UPDATE Usuario SET Ano='$ano', Turma='$turma' WHERE CPF='$cpf'";
+      // Testa se foi inserido no BD
+      //if($conecta->query($inserir_turma) === true){
+        //echo "Atualizado com sucesso";
+      //}else{
+        //echo "Não atualizado";
+    //}
+    }
+    //mysql_close($conexao);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   
@@ -18,36 +55,9 @@
 
 <body>
     <!-- Menu-->
-    <nav class="navbar navbar-expand-md bg-body-tertiary fonteMenu shadow p-3 mb-5 bg-body-tertiary rounded">
-        <div class="container-fluid fonteMenu" >
-          <a class="navbar-brand monitoraseMenu" href="index.html">MonitoraSE</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link botoesMenu" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link botoesMenu" href="index.html#sobre">Sobre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link botoesMenu active" href="#">Contato</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link botoesMenu" href="#">Download</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="search..." aria-label="Search">
-              <button class="btn btn-bd-lupa" type="submit"><img src="imagens/lupa.png" width="15px" height="15px"  alt="lupaPesquisa"> </button>
-            </form> 
-            <a class="btn btn-bd-login fonteBotao" href="login.html" role="button">Login</a>
-            <br>
-          </div>
-    </nav> 
+    <?php
+          include_once("navbar-home.php");
+    ?>
 
     <!-- Logo-->
     <div class="imagemContato container p-3 mb-5 ">
@@ -60,25 +70,27 @@
 
       <h2 class="text-center"><b>Cadastrar Turma</b></h2><br>
 
-      <label for="anoFormTurma" class="form-label "><b>Ano:</b></label>
-      <input type="text" class="form-control" id="anoFormTurma" name="ano" required> 
+      <form action="" method="post">  
+        <label for="anoFormTurma" class="form-label "><b>Ano:</b></label>
+        <input type="text" class="form-control" id="anoFormTurma" name="ano"> 
 
-      <label for="idFormTurma" class="form-label "><b>Identificação:</b></label>
-      <input type="cpf" class="form-control" id="idFormTurma" name="idTurma" required>
+          <label for="idFormTurma" class="form-label "><b>Identificação:</b></label>
+          <input class="form-control" id="searchbar" type="text" onkeyup="search_home()" placeholder="Digite CPF do aluno" aria-label="Search" name="cpf" value="<?php if(isset($cpf)) print $cpf; ?>"required>
+          <br>
+          <button class="btn btn-bd-lupa" type="submit" name="busca"><img src="imagens/lupa.png" width="15px" height="15px"  alt="lupaPesquisa"> </button>
 
-      <label for="idAluno" class="form-label "><b>Aluno:</b></label>
-      <select class="form-select" aria-label="Default select example">
-        <option selected>Selecione Aluno</option>
-        <option value="Maria">One</option>
-        <option value="João">Two</option>
-        <option value="Luisa">Three</option>
-      </select>  
-      <br><br><br>
+          <label for="idAluno" class="form-label "><b>Aluno:</b></label>
+          <input value="<?php if(isset($nome)) print $nome; ?>"/>
+        <br>
 
-      <div class="botaoCadastrar">
-        <button class="meuBotao">Cadastrar Turma</button>
-      </div>
-      
+        <label for="numeroTurma" class="form-label "><b>Turma:</b></label>
+        <input type="text" class="form-control" id="turma" name="turma"> 
+        <br><br><br>
+        <div class="botaoCadastrar">
+          <button class="meuBotao" name="cadastro-turma">Cadastrar Turma</button>
+        </div>
+        </form>
+
     </div>
   
 

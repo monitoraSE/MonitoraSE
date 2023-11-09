@@ -8,7 +8,6 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <nav class="navbar navbar-expand-md bg-body-tertiary fonteMenu shadow p-3 mb-5 bg-body-tertiary rounded">
     <div class="container-fluid fonteMenu" >
       <a class="navbar-brand monitoraseMenu" href="index.php">MonitoraSE</a>
@@ -34,8 +33,19 @@
         <form class="d-flex" role="search">
           <input class="form-control me-2" id="searchbar" type="search" onkeyup="search_home()" placeholder="search..." aria-label="Search">
           <button class="btn btn-bd-lupa" type="submit"><img src="imagens/lupa.png" width="15px" height="15px"  alt="lupaPesquisa"> </button>
-        </form> 
-        <a class="btn btn-bd-login fonteBotao" href="login.php" role="button">Login</a>
-        <br>
+        </form>
+        <?php
+          session_start();
+          if(isset($_SESSION['usuarioNome'])){
+            echo '<a href="php/logout.php" class="btn btn-bd-login fonteBotao"> 
+              Logout
+            </a>';
+          }
+          else{
+            echo '<a href="login.php" class="btn btn-bd-login fonteBotao"> 
+            Login
+          </a>';
+          }
+        ?>
       </div>
     </nav>    

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsavel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="./styles/style_responsavel-professor.css">
 </head>
 <body>
@@ -18,13 +19,26 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="responsavel.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="responsavel.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
                     </li>
                 </ul>
           </div>
+          <?php
+            session_start();
+                if(isset($_SESSION['usuarioNome'])){
+                    echo '<a href="php/logout.php" class="btn btn-bd-login fonteBotao"> 
+                    Logout
+                    </a>';
+                }
+                else{
+                    echo '<a href="login.php" class="btn btn-bd-login fonteBotao"> 
+                    Login
+                </a>';
+            }
+        ?>
         </div>
     </nav>
 

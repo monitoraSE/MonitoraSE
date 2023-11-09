@@ -18,82 +18,57 @@
 
 <body>
     <!-- Menu-->
-    <nav class="navbar navbar-expand-md bg-body-tertiary fonteMenu shadow p-3 mb-5 bg-body-tertiary rounded">
-        <div class="container-fluid fonteMenu" >
-          <a class="navbar-brand monitoraseMenu" href="index.html">MonitoraSE</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link botoesMenu" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link botoesMenu" href="index.html#sobre">Sobre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link botoesMenu active" href="#">Contato</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link botoesMenu" href="#">Download</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="search..." aria-label="Search">
-              <button class="btn btn-bd-lupa" type="submit"><img src="imagens/lupa.png" width="15px" height="15px"  alt="lupaPesquisa"> </button>
-            </form> 
-            <a class="btn btn-bd-login fonteBotao" href="login.html" role="button">Login</a>
-            <br>
-          </div>
-    </nav> 
-    <div id="containerTitulo">    
-        <h1 class="text-center"><b>Área do Administrador</b></h1><br>  
-    </div>
-
-    <main>
-      <div id="container1">
-        <div id="container11">
-          <div class="container-text">
-            <h3>Cadastrar</h3>
-            <h3>Usuário</h3>
-          </div>
-        </div> 
-        <div id="container12">
-          <div class="container-text">
-            <h3>Cadastrar</h3>
-            <h3>Turmas</h3>
-          </div>
-        </div> 
-        <div id="container13">
-          <div class="container-text">
-            <h3>Calendário</h3>
-            <h3>Escolar</h3>
-          </div>
-        </div>  
-      </div>
-
-      <div id="container2">
-        <div id="container14">
-          <div class="container-text">
-            <h3>Notificações</h3>
-            <h3>Gerais</h3>
-          </div>
-        </div> 
-        <div id="container15">
-          <div class="container-text">
-            <h3>Registrar Entrada</h3>
-            <h3>de Alunos</h3>
-          </div>
-        </div> 
-        
-      </div>
-    
-  
-    </main>
     <?php
+          include_once("navbar-home.php");
+    ?>
+    <main class="containerTitulo">
+      <div>    
+          <h1 class="text-center"><b>Área do Administrador</b></h1><br>  
+      </div>
+        <div id="container1">
+          <a href="cadastro.php" class="link-admin">
+          <div id="container11">
+            <div class="container-text">
+              <h3>Cadastrar</h3>
+              <h3>Usuário</h3></a>
+            </div>
+          </div> 
+          </a>
+          <a href="cadastroTurma.php" class="link-admin">
+          <div id="container12">
+            <div class="container-text">
+              <h3>Cadastrar</h3>
+              <h3>Turmas</h3>
+            </div>
+          </div> 
+          </a>
+          <div id="container13">
+            <div class="container-text">
+              <h3>Calendário</h3>
+              <h3>Escolar</h3>
+            </div>
+          </div>  
+        </div>
+
+        <div id="container2">
+          <div id="container14">
+            <div class="container-text">
+              <h3>Notificações</h3>
+              <h3>Gerais</h3>
+            </div>
+          </div> 
+          <div id="container15">
+            <div class="container-text">
+              <h3>Registrar Entrada</h3>
+              <h3>de Alunos</h3>
+            </div>
+          </div> 
+          
+        </div>
+    </main>
+
+</body>
+<?php
           include_once("rodape.php");
     ?>
-</body>
 

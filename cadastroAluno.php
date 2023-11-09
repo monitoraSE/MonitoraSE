@@ -18,36 +18,9 @@
 
 <body>
     <!-- Menu-->
-    <nav class="navbar navbar-expand-md bg-body-tertiary fonteMenu shadow p-3 mb-5 bg-body-tertiary rounded">
-        <div class="container-fluid fonteMenu" >
-          <a class="navbar-brand monitoraseMenu" href="index.html">MonitoraSE</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link botoesMenu" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link botoesMenu" href="index.html#sobre">Sobre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link botoesMenu active" href="#">Contato</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link botoesMenu" href="#">Download</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="search..." aria-label="Search">
-              <button class="btn btn-bd-lupa" type="submit"><img src="imagens/lupa.png" width="15px" height="15px"  alt="lupaPesquisa"> </button>
-            </form> 
-            <a class="btn btn-bd-login fonteBotao" href="login.html" role="button">Login</a>
-            <br>
-          </div>
-    </nav> 
+    <?php
+          include_once("navbar-home.php");
+    ?>
 
     <!--Conteiner principal-->
 
