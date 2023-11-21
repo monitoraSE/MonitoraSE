@@ -1,3 +1,7 @@
+<?php
+        include_once("php/consultaEscola.php");    
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -43,7 +47,23 @@
     </nav>
 
     <main class="card-branco">
-        <h1 class="titulo-principal">Professor</h1>
+        <h1 class="titulo-principal">Professor </h1>
+        <p class="texto escola"><?php print $_SESSION['usuarioNome']; ?></p>
+
+        <a class="card-amarelo" href="#">
+
+            <div class="container_texto">
+                <p class="texto escola">
+                    Escola: <?php if(isset($nome)) print $_SESSION['escolaNome']; ?>
+                </p>
+            </div>
+            
+            <div class="container_texto">
+                <p class="texto">
+                    Endereço: <?php if(isset($endereco)) print $_SESSION['escolaEndereco']; ?>
+                </p>               
+            </div>
+        </a>
 
         <a class="card-amarelo" href="#">
 
@@ -52,11 +72,7 @@
                     Escola: **********************
                 </p>
             </div>
-            <div class="container_texto">
-                <p class="texto">
-                    Turma: ***********
-                </p>                
-            </div>
+            
             <div class="container_texto">
                 <p class="texto">
                     Endereço: Rua ***********, Bairro *************, número: ****, cep ********, cidade **********
@@ -71,11 +87,7 @@
                     Escola: **********************
                 </p>
             </div>
-            <div class="container_texto">
-                <p class="texto">
-                    Turma: ***********
-                </p>                
-            </div>
+            
             <div class="container_texto">
                 <p class="texto">
                     Endereço: Rua ***********, Bairro *************, número: ****, cep ********, cidade **********
@@ -90,11 +102,7 @@
                     Escola: **********************
                 </p>
             </div>
-            <div class="container_texto">
-                <p class="texto">
-                    Turma: ***********
-                </p>                
-            </div>
+            
             <div class="container_texto">
                 <p class="texto">
                     Endereço: Rua ***********, Bairro *************, número: ****, cep ********, cidade **********
@@ -102,24 +110,8 @@
             </div>
         </a>
 
-        <a class="card-amarelo" href="#">
 
-            <div class="container_texto">
-                <p class="texto escola">
-                    Escola: **********************
-                </p>
-            </div>
-            <div class="container_texto">
-                <p class="texto">
-                    Turma: ***********
-                </p>                
-            </div>
-            <div class="container_texto">
-                <p class="texto">
-                    Endereço: Rua ***********, Bairro *************, número: ****, cep ********, cidade **********
-                </p>               
-            </div>
-        </a>
+
 
     </main>
 

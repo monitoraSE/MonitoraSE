@@ -324,6 +324,10 @@ Estilos especificos da tela Login
   background: #FAEA48;
 }
 
+.botao_login_enviar {
+  display: flex;
+  justify-content: center;
+}
 
 /* 
 -------------------------------------------------------------------------------------------------

@@ -1,0 +1,25 @@
+{
+  "name": "connection",
+  "version": "1.0.0",
+  "description": "<h1>Marcela, Guilherme e Tamires,</h1>",
+  "scripts": {
+    "dev": "nodemon ./sripts/connections.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.3",
+    "nodemon": "^3.0.1"
+  },
+  "main": "./sripts/connections.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monitoraSE/DesenvolvimentoWeb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monitoraSE/DesenvolvimentoWeb/issues"
+  },
+  "homepage": "https://github.com/monitoraSE/DesenvolvimentoWeb#readme"
+}

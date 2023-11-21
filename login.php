@@ -21,14 +21,15 @@
             <form class="container-imput" method="POST" action="./php/loginUsuario.php">
 
                 <div>
-                    <label for="cpf" class="email-senha">CPF</label>
-                    <input type="text" id="email" name="cpf" class="input" placeholder="CPF apenas números">
+                    <label for="cpf" class="email-senha">Nome Usuário</label>
+                    <input type="text" id="email" name="nomeusuario" class="input" placeholder="Digite seu nome de usuário registrado">
                 </div>
 
                 <div>
                     <label for="senha" class="email-senha">Senha</label>
                     <input type="password" id="senha" name="senha" class="input" placeholder="****************">
                 </div>
+                <div class=botao_login_enviar">
                     <input type="submit" value="Entrar" class="input-entrar">
                 </div>
 
