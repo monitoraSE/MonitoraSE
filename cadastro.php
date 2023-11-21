@@ -39,6 +39,9 @@
       <label for="nomeFormCada" class="form-label "><b>Nome:</b></label>
       <input type="text" class="form-control" id="nomeFormCada" name="nome" required> 
 
+      <label for="nomeusuFormCada" class="form-label "><b>Nome do Usuário:</b></label>
+      <input type="text" class="form-control" id="nomeusuFormCada" name="nome_usuario" placeholder="Para fazer login" required> 
+
       <label for="emailFormCada" class="form-label "><b>E-mail:</b></label>     
       <input type="email" class="form-control" id="emailFormCada" placeholder="name@example.com" name="email" required>
 
