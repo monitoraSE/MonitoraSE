@@ -37,7 +37,7 @@
             echo "<script>alert('Problema 1'); setTimeout(function(){
                 window.location='../cadastro.php';},500);
                 </script>";
-            header("Location: ../index.html");
+            header("Location: ../login.php");
         }
     //O campo usuário e senha não preenchido entra no else e redireciona o usuário para a página de login
     }else{
@@ -45,6 +45,6 @@
         echo "<script>alert('Problema 2'); setTimeout(function(){
             window.location='../cadastro.php';},500);
             </script>";
-        header("Location: ../index.html");
+        header("Location: ../login.php");
     }
 ?>
