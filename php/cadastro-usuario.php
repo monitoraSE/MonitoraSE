@@ -12,11 +12,12 @@ include("conexaobd.php");
         $email       = $_POST["email"];
         $senha       = $_POST["senha"];
         $tipoUsuario     = $_POST["tipoUsuario"];
+        $nomeUsuario     = $_POST["nome_usuario"];
 
         $inserir = "INSERT INTO Usuario ";
-        $inserir .= "(Nome,CNPJ_CPF,Data_Nascimento,Telefone,Email,Senha,Tipo_Usuario) ";
+        $inserir .= "(CPF,Nome,Email,Data_Nascimento,Telefone,Senha,Tipo_Usuario,Nome_Usuario) ";
         $inserir .= "VALUES ";
-        $inserir .= "('$nome','$cpf','$data','$telefone','$email','$senha','$tipoUsuario')";
+        $inserir .= "('$cpf','$nome','$email','$data','$telefone','$senha','$tipoUsuario','$nomeusuario')";
 
         $operacao_inserir = mysqli_query($conecta,$inserir);
         if(!$operacao_inserir) {
