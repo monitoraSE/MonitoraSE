@@ -23,7 +23,7 @@
             if($_SESSION['usuarioNiveisAcessoId'] == "1"){
                 header("Location: ../administrador.php");
             }elseif($_SESSION['usuarioNiveisAcessoId'] == "2"){
-                header("Location: ../professor.php");
+                header("Location: ../professor_turmas.php");
             }elseif($_SESSION['usuarioNiveisAcessoId'] == "3"){
                 header("Location: ../responsavel.php");
             }else{
@@ -33,18 +33,12 @@
         //redireciona o usuario para a página de login
         }else{    
             //Váriavel global recebendo a mensagem de erro
-            $_SESSION['loginErro'] = "Usuário ou senha Inválido";
-            echo "<script>alert('Problema 1'); setTimeout(function(){
-                window.location='../cadastro.php';},500);
-                </script>";
+            $_SESSION['loginErro'] = "Usuário não encontrado";
             header("Location: ../login.php");
         }
     //O campo usuário e senha não preenchido entra no else e redireciona o usuário para a página de login
     }else{
-        $_SESSION['loginErro'] = "Usuário ou senha inválido";
-        echo "<script>alert('Problema 2'); setTimeout(function(){
-            window.location='../cadastro.php';},500);
-            </script>";
+        $_SESSION['loginErro'] = "Usuário não encontrado";
         header("Location: ../login.php");
     }
 ?>

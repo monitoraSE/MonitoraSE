@@ -1,3 +1,7 @@
+<?php
+        session_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,7 +16,7 @@
     
     <nav class="navbar navbar-expand-md bg-body-tertiary shadow p-3 bg-body-tertiary rounded">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">MonitoraSE</a>
+          <a class="navbar-brand" href="index.php">MonitoraSE</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -43,7 +47,7 @@
     </nav>
 
     <main class="card-branco">
-        <h1 class="titulo-principal">Responsável</h1>
+        <h1 class="titulo-principal"><?php print $_SESSION['usuarioNome']; ?></h1>
 
         <div class="card_aluno">
 

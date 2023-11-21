@@ -18,10 +18,9 @@
           include_once("navbar-home.php");
     ?>
 
-     <div class="imagemContato container card card-Imagem shadow p-3 mb-5 rounded">
+    <div class="imagemContato container p-3 mb-5 ">
         <img src="imagens/logo.png" class="img-fluid" alt="LogoMonitoraSE">
-     </div>
-     <br>
+    </div>
 
         <section id="contato">
           <!--action="contatoEnviar.php" method= "post" metodo para fazer o botao do form enviar-->

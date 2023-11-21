@@ -1,3 +1,8 @@
+<?php
+        session_start(); 
+        include_once("./php/consultaEscola.php");    
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,13 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MonitoraSE - Professor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="./styles/style_responsavel-professor.css">
 </head>
 <body>
     
     <nav class="navbar navbar-expand-md bg-body-tertiary shadow p-3 bg-body-tertiary rounded">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">MonitoraSE</a>
+          <a class="navbar-brand" href="index.php">MonitoraSE</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -25,11 +31,23 @@
                     </li>
                 </ul>
           </div>
+          <?php
+                if(isset($_SESSION['usuarioNome'])){
+                    echo '<a href="php/logout.php" class="btn btn-bd-login fonteBotao"> 
+                    Logout
+                    </a>';
+                }
+                else{
+                    echo '<a href="login.php" class="btn btn-bd-login fonteBotao"> 
+                    Login
+                </a>';
+            }
+            ?>
         </div>
     </nav>
 
     <main class="card-branco">
-        <h1 class="titulo-principal">Professor ****************</h1>
+        <h1 class="titulo-principal"><?php print $_SESSION['usuarioNome']; ?></h1>
         <h2 class="titulo-principal secundario">Escola **************</h2>
 
         <!-- Turma dentro do container trasparente com bordas -->
@@ -42,15 +60,15 @@
 
             <!-- botoes amarelos -->
             <div class="botoes">
-                <a class="card-amarelo botao_amarelo link_botao" href="#">
+                <a class="card-amarelo botao_amarelo link_botao" href="professor_rg_nota.php">
                     Registro de nota
                 </a>
 
-                <a class="card-amarelo botao_amarelo" href="#">
+                <a class="card-amarelo botao_amarelo" href="professor_rg_presenca.php">
                     Registro de presença
                 </a>
 
-                <a class="card-amarelo botao_amarelo" href="#">
+                <a class="card-amarelo botao_amarelo" href="professor_rg_atividade.php">
                     Registro de tarefas
                 </a>   
             </div>
