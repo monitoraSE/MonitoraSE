@@ -34,6 +34,7 @@
             </div>
           </div> 
           </a>
+
           <a href="cadastroTurma.php" class="link-admin">
           <div id="container12">
             <div class="container-text">
@@ -50,6 +51,7 @@
           </div>  
         </div>
 
+        <a href="enviarNotificacao.html" class="link-admin">
         <div id="container2">
           <div id="container14">
             <div class="container-text">
@@ -57,6 +59,7 @@
               <h3>Gerais</h3>
             </div>
           </div> 
+          </a>
           <div id="container15">
             <div class="container-text">
               <h3>Registrar Entrada</h3>
