@@ -10,14 +10,17 @@ include("conexaobd.php");
         $data = date("Y-m-d", strtotime($nascimento));
         $telefone = $_POST["telefone"];
         $email       = $_POST["email"];
+        $imagem  = $_FILES("imagemperfil");
         $senha       = $_POST["senha"];
+        $hash =   password_hash ($senha, PASSWORD_DEFAULT);
         $tipoUsuario     = $_POST["tipoUsuario"];
         $nomeUsuario     = $_POST["nome_usuario"];
+
 
         $inserir = "INSERT INTO Usuario ";
         $inserir .= "(CPF,Nome,Email,Data_Nascimento,Telefone,Senha,Tipo_Usuario,Nome_Usuario) ";
         $inserir .= "VALUES ";
-        $inserir .= "('$cpf','$nome','$email','$data','$telefone','$senha','$tipoUsuario','$nomeusuario')";
+        $inserir .= "('$cpf','$nome','$email','$data','$telefone','$hash','$tipoUsuario','$nomeusuario')";
 
         $operacao_inserir = mysqli_query($conecta,$inserir);
         if(!$operacao_inserir) {
