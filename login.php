@@ -27,7 +27,10 @@
 
                 <div>
                     <label for="senha" class="email-senha">Senha</label>
-                    <input type="password" id="senha" name="senha" class="input" placeholder="****************">
+                    <input type="password" id="senha" name="senha" class="input" placeholder="******">
+                </div>
+                <div>
+                    <a href="cadastro.php">Ainda não possui conta? Cadastre-se</a>
                 </div>
                 <div class="botao_login_enviar">
                     <input type="submit" value="Entrar" class="input-entrar">
