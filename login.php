@@ -11,7 +11,6 @@
     <?php
           include_once("navbar-home.php");
     ?>
-
     <main class="main-login">
 
         <div class="retangulo__branco">  
