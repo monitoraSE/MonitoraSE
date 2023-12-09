@@ -7,27 +7,30 @@
         $usuario = mysqli_real_escape_string($conecta, $_POST['nomeusuario']); //Escapar de caracteres especiais, como aspas, prevenindo SQL injection
         $senha = mysqli_real_escape_string($conecta, $_POST['senha']);
         //$senha = md5($senha);
-            
-        //Buscar na tabela usuario o usuário que corresponde com os dados digitado no formulário
-        $result_usuario = "SELECT * FROM Usuario WHERE Nome_Usuario = '$usuario' && Senha = '$senha' LIMIT 1";
-        $resultado_usuario = mysqli_query($conecta, $result_usuario);
-        $resultado = mysqli_fetch_assoc($resultado_usuario);
         
-        //Encontrado um usuario na tabela usuário com os mesmos dados digitado no formulário
-        if(isset($resultado)){
-            $_SESSION['usuarioId'] = $resultado['IdUsuario'];
-            $_SESSION['usuarioNome'] = $resultado['Nome'];
-            $_SESSION['usuarioNiveisAcessoId'] = $resultado['Tipo_Usuario'];
-            $_SESSION['usuarioCPF'] = $resultado['CPF'];
-            $_SESSION['usuarioUsuario'] = $resultado['Nome_Usuario'];
-            if($_SESSION['usuarioNiveisAcessoId'] == "1"){
-                header("Location: ../administrador.php");
-            }elseif($_SESSION['usuarioNiveisAcessoId'] == "2"){
-                header("Location: ../professor_turmas.php");
-            }elseif($_SESSION['usuarioNiveisAcessoId'] == "3"){
-                header("Location: ../responsavel.php");
-            }else{
-                header("Location: ../aluno.php");
+        //Buscar na tabela usuario o usuário que corresponde com os dados digitado no formulário
+        $result_usuario = "SELECT * FROM Usuario WHERE Nome_Usuario = '$usuario' and Senha = '$senha' LIMIT 1";
+        $result_senha = "SELECT Senha FROM Usuario WHERE Nome_Usuario = '$usuario'"; //pegando a senha criptografada para comparar
+        if (password_verify($senha, $result_senha)){
+            $resultado_usuario = mysqli_query($conecta, $result_usuario);
+            $resultado = mysqli_fetch_assoc($resultado_usuario);
+            
+            //Encontrado um usuario na tabela usuário com os mesmos dados digitado no formulário
+            if(isset($resultado)){
+                $_SESSION['usuarioId'] = $resultado['IdUsuario'];
+                $_SESSION['usuarioNome'] = $resultado['Nome'];
+                $_SESSION['usuarioNiveisAcessoId'] = $resultado['Tipo_Usuario'];
+                $_SESSION['usuarioCPF'] = $resultado['CPF'];
+                $_SESSION['usuarioUsuario'] = $resultado['Nome_Usuario'];
+                if($_SESSION['usuarioNiveisAcessoId'] == "1"){
+                    header("Location: ../administrador.php");
+                }elseif($_SESSION['usuarioNiveisAcessoId'] == "2"){
+                    header("Location: ../professor_turmas.php");
+                }elseif($_SESSION['usuarioNiveisAcessoId'] == "3"){
+                    header("Location: ../responsavel.php");
+                }else{
+                    header("Location: ../aluno.php");
+                }
             }
         //Não foi encontrado um usuario na tabela usuário com os mesmos dados digitado no formulário
         //redireciona o usuario para a página de login
@@ -36,6 +39,7 @@
             $_SESSION['loginErro'] = "Usuário não encontrado";
             header("Location: ../login.php");
         }
+        
     //O campo usuário e senha não preenchido entra no else e redireciona o usuário para a página de login
     }else{
         $_SESSION['loginErro'] = "Usuário não encontrado";
