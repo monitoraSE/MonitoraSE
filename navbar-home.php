@@ -21,13 +21,13 @@
             <a class="nav-link botoesMenu active" aria-current="page" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link botoesMenu" href="#sobre">Sobre</a>
+            <a class="nav-link botoesMenu" href="index.php/#sobre">Sobre</a>
           </li>
           <li class="nav-item">
             <a class="nav-link botoesMenu" href="contato.php">Contato</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link botoesMenu" href="#reviews">Avaliações</a>
+            <a class="nav-link botoesMenu" href="index.php/#reviews">Avaliações</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
