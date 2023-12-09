@@ -33,6 +33,10 @@
     <form id="containerCadastro" action="./php/cadastro-usuario.php" method="post">    
 
       <h2 class="text-center"><b>Cadastrar Usuário</b></h2><br>
+      <div class="mb-3">
+        <label for="formFile" class="form-label">Insira uma imagem de perfil</label>
+        <input class="form-control" type="file" id="formFile" name="imagemperfil">
+      </div>
       <label for="cpfFormCada" class="form-label "><b>CPF:</b></label>
       <input type="cpf" class="form-control" id="cpfFormCada" name="cpf" placeholder="apenas números" required>
 
@@ -59,17 +63,17 @@
 
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="tipoUsuario"
-        <?php if(isset($usuario) && $usuario == "2") echo checked;?> id="inlineRadio1" value="2">
+        <?php if(isset($usuario) && $usuario == "2") echo "checked";?> id="inlineRadio1" value="2">
         <label class="form-check-label" for="inlineRadio1">Professor</label>
       </div>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="tipoUsuario" 
-        <?php if(isset($usuario) && $usuario == "3") echo checked;?> id="inlineRadio2" value="3">
+        <?php if(isset($usuario) && $usuario == "3") echo "checked";?> id="inlineRadio2" value="3">
         <label class="form-check-label" for="inlineRadio2">Responsável</label>
       </div>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="tipoUsuario" 
-        <?php if(isset($usuario) && $usuario == "3") echo checked;?> id="inlineRadio3" value="4">
+        <?php if(isset($usuario) && $usuario == "3") echo "checked";?> id="inlineRadio3" value="4">
         <label class="form-check-label" for="inlineRadio3">Aluno</label>
       </div>
       <br><br><br>
