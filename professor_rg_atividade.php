@@ -48,7 +48,7 @@
 
 
     <main class="card-branco">
-        <h1 class="titulo-principal"><?php print $_SESSION['usuarioNome']; ?></h1>
+        <h1 class="titulo-principal">Professor ****************</h1>
         <div class="card_amarelo_maior">
             <div class="sub_titulos">
     
@@ -70,7 +70,7 @@
 
 
 
-                <div class="todos_alunos">
+                <div class="todos_alunos em_linha">
 
                     <!-- reutilizando uma das classes que fiz (guilherme) 
                     é a mensagem de pergunta "o aluno fez a atividade?"-->
@@ -88,10 +88,10 @@
 
                     <!-- container para se puxar informações do banco de dados, alterar o nome do
                     aluno e linkar a responsta com esse aluno -->
-                    <div class="container_aluno">
+                    <div class="container_aluno ocupa_linha">
                         <p class="aluno">Aluno: **************** ********* *************</p>
 
-                        <div class="check_box">
+                        <div class="check_box em_coluna">
                             <div class="botoes_checkbox">
                                 <input type="radio" id="sim1" name="validacao1" value="sim">
                                 <label for="sim1">Sim</label>
@@ -106,10 +106,10 @@
 
                     <!-- container para se puxar informações do banco de dados, alterar o nome do
                     aluno e linkar a responsta com esse aluno -->
-                    <div class="container_aluno">
+                    <div class="container_aluno ocupa_linha">
                         <p class="aluno">Aluno: **************** ********* *************</p>
 
-                        <div class="check_box">
+                        <div class="check_box em_coluna">
                             <div class="botoes_checkbox">
                                 <input type="radio" id="sim2" name="validacao2" value="sim">
                                 <label for="sim2">Sim</label>
@@ -124,10 +124,10 @@
 
                     <!-- container para se puxar informações do banco de dados, alterar o nome do
                     aluno e linkar a responsta com esse aluno -->
-                    <div class="container_aluno">
+                    <div class="container_aluno ocupa_linha">
                         <p class="aluno">Aluno: **************** ********* *************</p>
 
-                        <div class="check_box">
+                        <div class="check_box em_coluna">
                             <div class="botoes_checkbox">
                                 <input type="radio" id="sim3" name="validacao3" value="sim">
                                 <label for="sim3">Sim</label>
@@ -142,10 +142,10 @@
 
                     <!-- container para se puxar informações do banco de dados, alterar o nome do
                     aluno e linkar a responsta com esse aluno -->
-                    <div class="container_aluno">
+                    <div class="container_aluno ocupa_linha">
                         <p class="aluno">Aluno: **************** ********* *************</p>
 
-                        <div class="check_box">
+                        <div class="check_box em_coluna">
                             <div class="botoes_checkbox">
                                 <input type="radio" id="sim4" name="validacao4" value="sim">
                                 <label for="sim4">Sim</label>

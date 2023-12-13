@@ -48,7 +48,7 @@
 
 
     <main class="card-branco">
-        <h1 class="titulo-principal"><?php print $_SESSION['usuarioNome']; ?></h1>
+        <h1 class="titulo-principal">Professor ****************</h1>
         <div class="card_amarelo_maior">
             <div class="sub_titulos">
     
@@ -70,7 +70,7 @@
 
 
 
-                <div class="todos_alunos">
+                <div class="todos_alunos em_linha">
 
                     <!-- ATENÇÃO:
                     quando for gerar um novo bloco container_aluno, lembrar de mudar o id e o name das marcações,
@@ -82,10 +82,10 @@
 
                     <!-- container para se puxar informações do banco de dados, alterar o nome do
                     aluno e linkar a responsta com esse aluno -->
-                    <div class="container_aluno">
+                    <div class="container_aluno ocupa_linha">
                         <p class="aluno">Aluno: **************** ********* *************</p>
 
-                        <div class="check_box">
+                        <div class="check_box em_coluna">
                             <div class="botoes_checkbox">
                                 <input type="radio" id="presente1" name="validacao1" value="presente">
                                 <label for="presente1">Presente</label>
@@ -100,10 +100,10 @@
 
                     <!-- container para se puxar informações do banco de dados, alterar o nome do
                     aluno e linkar a responsta com esse aluno -->
-                    <div class="container_aluno">
+                    <div class="container_aluno ocupa_linha">
                         <p class="aluno">Aluno: **************** ********* *************</p>
 
-                        <div class="check_box">
+                        <div class="check_box em_coluna">
                             <div class="botoes_checkbox">
                                 <input type="radio" id="presente2" name="validacao2" value="presente">
                                 <label for="presente2">Presente</label>
@@ -118,10 +118,10 @@
 
                     <!-- container para se puxar informações do banco de dados, alterar o nome do
                     aluno e linkar a responsta com esse aluno -->
-                    <div class="container_aluno">
+                    <div class="container_aluno ocupa_linha">
                         <p class="aluno">Aluno: **************** ********* *************</p>
 
-                        <div class="check_box">
+                        <div class="check_box em_coluna">
                             <div class="botoes_checkbox">
                                 <input type="radio" id="presente3" name="validacao3" value="presente">
                                 <label for="presente3">Presente</label>
@@ -136,10 +136,10 @@
 
                     <!-- container para se puxar informações do banco de dados, alterar o nome do
                     aluno e linkar a responsta com esse aluno -->
-                    <div class="container_aluno">
+                    <div class="container_aluno ocupa_linha">
                         <p class="aluno">Aluno: **************** ********* *************</p>
 
-                        <div class="check_box">
+                        <div class="check_box em_coluna">
                             <div class="botoes_checkbox">
                                 <input type="radio" id="presente4" name="validacao4" value="presente">
                                 <label for="presente4">Presente</label>
@@ -154,10 +154,10 @@
 
                     <!-- container para se puxar informações do banco de dados, alterar o nome do
                     aluno e linkar a responsta com esse aluno -->
-                    <div class="container_aluno">
+                    <div class="container_aluno ocupa_linha">
                         <p class="aluno">Aluno: **************** ********* *************</p>
 
-                        <div class="check_box">
+                        <div class="check_box em_coluna">
                             <div class="botoes_checkbox">
                                 <input type="radio" id="presente5" name="validacao5" value="presente">
                                 <label for="presente5">Presente</label>
