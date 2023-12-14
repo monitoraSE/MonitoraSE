@@ -20,7 +20,6 @@
             $_SESSION['usuarioNome'] = $resultado['Nome'];
             $_SESSION['usuarioNiveisAcessoId'] = $resultado['Tipo_Usuario'];
             $_SESSION['usuarioCPF'] = $resultado['CPF'];
-            $_SESSION['usuarioUsuario'] = $resultado['IdUsuario'];
                 if($_SESSION['usuarioNiveisAcessoId'] == "1"){
                     header("Location: ../administrador.php");
                 }elseif($_SESSION['usuarioNiveisAcessoId'] == "2"){
