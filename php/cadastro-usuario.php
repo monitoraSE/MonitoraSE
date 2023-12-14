@@ -18,7 +18,7 @@ include("conexaobd.php");
 
 
         $inserir = "INSERT INTO Usuario ";
-        $inserir .= "(CPF,Nome,Email,Data_Nascimento,Telefone,Senha,Tipo_Usuario,Nome_Usuario) ";
+        $inserir .= "(CPF,Nome,Email,Data_Nascimento,Telefone,Senha,Tipo_Usuario,IdUsuario) ";
         $inserir .= "VALUES ";
         $inserir .= "('$cpf','$nome','$email','$data','$telefone','$hash','$tipoUsuario','$nomeusuario')";
 
