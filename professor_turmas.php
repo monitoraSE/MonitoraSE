@@ -48,13 +48,13 @@
 
     <main class="card-branco">
         <h1 class="titulo-principal"><?php print $_SESSION['usuarioNome']; ?></h1>
-        <h2 class="titulo-principal secundario">Escola **************</h2>
+        <h2 class="titulo-principal secundario"><?php print $_SESSION['escolaNome']; ?></h2>
 
         <!-- Turma dentro do container trasparente com bordas -->
         <div class="card_transparente">
             <div class="container_texto turma">
                 <p class="texto escola">
-                    Turma: **************
+                    Turma: 601
                 </p>
             </div>
 
@@ -79,7 +79,7 @@
         <div class="card_transparente">
             <div class="container_texto turma">
                 <p class="texto escola">
-                    Turma: **************
+                    Turma: 702
                 </p>
             </div>
 
@@ -104,7 +104,7 @@
         <div class="card_transparente">
             <div class="container_texto turma">
                 <p class="texto escola">
-                    Turma: **************
+                    Turma: 1001
                 </p>
             </div>
 
