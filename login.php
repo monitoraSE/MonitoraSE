@@ -21,7 +21,7 @@
 
                 <div>
                     <label for="cpf" class="email-senha">Nome Usuário</label>
-                    <input type="text" id="email" name="nomeusuario" class="input" placeholder="Digite seu nome de usuário">
+                    <input type="text" id="idusuario" name="idusuario" class="input" placeholder="Digite seu id usuário">
                 </div>
 
                 <div>

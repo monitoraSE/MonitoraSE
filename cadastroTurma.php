@@ -1,4 +1,8 @@
 <?php
+        session_start(); 
+?>
+
+<?php
         //Incluindo a conexão com banco de dados   
     include_once("php/conexaobd.php");    
     //O campo usuário e senha preenchido entra no if para validar

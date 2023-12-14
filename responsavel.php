@@ -31,7 +31,6 @@
                 </ul>
           </div>
           <?php
-            session_start();
                 if(isset($_SESSION['usuarioNome'])){
                     echo '<a href="php/logout.php" class="btn btn-bd-login fonteBotao"> 
                     Logout
